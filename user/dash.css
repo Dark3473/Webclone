@@ -1,0 +1,1269 @@
+/* === Dashboard Specific Styles === */
+
+body {
+    background-color: #f4f7f9; /* Màu nền chung cho trang dashboard */
+}
+
+/* Dashboard Header */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 3%; /* Giảm padding một chút */
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.dashboard-header .logo img {
+    height: auto; /* Đặt chiều cao mong muốn cho logo */
+    width: 110px; /* Chiều rộng tự động điều chỉnh để giữ tỷ lệ */
+    display: block;
+}
+.dashboard-header .center-nav {
+    display: flex;
+    gap: 10px; /* Khoảng cách giữa các link */
+}
+
+.dashboard-header .center-nav a {
+    padding: 8px 15px;
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    font-size: 0.95em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dashboard-header .center-nav a:hover {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.dashboard-header .center-nav a.active {
+    font-weight: bold;
+    border-bottom: 2px solid green;
+}
+
+.dashboard-header .user-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Khoảng cách giữa các icon */
+}
+
+.dashboard-header .user-actions a {
+    color: #555;
+    font-size: 1.3em; /* Kích thước icon */
+    text-decoration: none;
+}
+.dashboard-header .user-actions a:hover {
+    color: #000;
+}
+.coming-soon-content {
+    padding: 40px;
+    text-align: center;
+    font-size: 1.2em;
+    color: #555;
+}
+ .coming-soon-content h1 {
+    margin-bottom: 20px;
+}
+/* Dashboard Layout */
+.dashboard-container {
+    display: flex;
+    max-width: 1400px; /* Giới hạn chiều rộng */
+    margin: 20px auto; /* Khoảng cách trên dưới và căn giữa */
+    padding: 0 20px; /* Padding trái phải */
+    gap: 25px; /* Khoảng cách giữa sidebar và content */
+    align-items: flex-start; /* Căn các cột lên trên */
+}
+
+/* Dashboard Sidebar */
+.dashboard-sidebar {
+    flex: 0 0 220px; /* Không co giãn, chiều rộng cố định */
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px 0; /* Padding top/bottom, không padding trái/phải cho nav */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.dashboard-sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dashboard-sidebar nav li a {
+    display: block;
+    padding: 12px 25px; /* Padding cho các mục link */
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+    border-left: 4px solid transparent; /* Đường kẻ trái để highlight active */
+    transition: background-color 0.2s ease, border-left-color 0.2s ease;
+}
+
+.dashboard-sidebar nav li a:hover {
+    background-color: #f8f9fa;
+}
+
+.dashboard-sidebar nav li a.active {
+    color: #6aab3e; /* Màu chữ active */
+    font-weight: 600;
+    border-left-color: #6aab3e; /* Highlight đường kẻ trái */
+    background-color: #e8f5e1; /* Màu nền nhẹ cho active */
+}
+
+/* Dashboard Content Area */
+.dashboard-content {
+    flex-grow: 1; /* Chiếm phần không gian còn lại */
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.dashboard-content h1 {
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: #333;
+    font-weight: 600;
+}
+
+/* Content Tabs */
+.content-tabs {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+.content-tabs .tab-link {
+    background: none;
+    border: none;
+    padding: 5px 15px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #555;
+    font-weight: 500;
+    border-bottom: 3px solid transparent;
+    transition: color 0.3s ease, border-bottom-color 0.3s ease;
+}
+.content-tabs .tab-link:hover {
+    color: #000;
+}
+.content-tabs .tab-link.active {
+    color: #6aab3e;
+    font-weight: 600;
+    border-bottom-color: #6aab3e;
+}
+
+/* Course List */
+.course-list-item {
+    display: flex;
+    gap: 25px;
+    padding: 25px 0;
+    border-bottom: 1px solid #f0f0f0;
+    align-items: flex-start;
+}
+.course-list-item:last-child {
+    border-bottom: none;
+}
+
+.course-thumbnail {
+    flex: 0 0 180px; /* Chiều rộng cố định cho thumbnail */
+}
+
+/* Mini Card Example (Copy/Adapt from index.css if needed) */
+.mini-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    font-size: 0.9em; /* Giảm cỡ chữ */
+}
+.mini-card.card-css .mini-card-header { background-color: #7dba41; }
+.mini-card.card-js .mini-card-header { background-color: #333a40; }
+/* Add other card types */
+
+.mini-card-header {
+    padding: 10px; /* Giảm padding */
+    color: #fff;
+    font-weight: bold;
+}
+.mini-card-provider {
+    font-size: 0.8em;
+    font-weight: normal;
+    opacity: 0.9;
+    margin-top: 3px;
+}
+
+
+.course-details {
+    flex-grow: 1;
+}
+
+.course-details h2 {
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Responsive grid */
+    gap: 5px 15px; /* Khoảng cách dòng và cột */
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 20px;
+}
+.details-grid p {
+    margin: 0;
+}
+.details-grid p strong {
+    color: #333;
+}
+
+.course-actions {
+    display: flex;
+    flex-wrap: wrap; /* Cho phép xuống dòng nếu không đủ chỗ */
+    gap: 8px; /* Khoảng cách giữa các nút */
+}
+
+.btn-action {
+    background-color: #e9ecef; /* Màu nền xám nhạt */
+    color: #495057;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+.btn-action:hover {
+    background-color: #dee2e6;
+    color: #212529;
+}
+.btn-action.btn-resume {
+    background-color: #6aab3e; /* Nút Resume có màu khác */
+    color: #fff;
+}
+.btn-action.btn-resume:hover {
+    background-color: #5a9a2e;
+}
+
+
+/* Responsive */
+@media (max-width: 992px) {
+    .dashboard-container {
+        flex-direction: column; /* Xếp chồng sidebar và content */
+    }
+    .dashboard-sidebar {
+        flex: 0 0 auto; /* Reset flex basis */
+        width: 100%; /* Chiếm toàn bộ chiều rộng */
+        margin-bottom: 20px;
+    }
+    .dashboard-sidebar nav ul {
+        display: flex; /* Hiển thị các mục nav ngang */
+        justify-content: center;
+        border-bottom: 1px solid #e0e0e0;
+    }
+     .dashboard-sidebar nav li a {
+        border-left: none;
+        border-bottom: 4px solid transparent; /* Dùng border dưới thay cho trái */
+        padding: 12px 15px;
+    }
+    .dashboard-sidebar nav li a.active {
+        border-left-color: transparent;
+        border-bottom-color: #6aab3e;
+        background-color: transparent;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-header .center-nav { display: none; } /* Ẩn nav giữa */
+    .course-list-item { flex-direction: column; } /* Xếp chồng thumbnail và details */
+    .course-thumbnail { flex-basis: auto; width: 100%; max-width: 250px; margin-bottom: 15px; }
+    .details-grid { grid-template-columns: 1fr; } /* 1 cột */
+}
+/* === Account Settings Specific Styles === */
+
+/* Sidebar Link cho Delete Account */
+.dashboard-sidebar nav li a.delete-account-link {
+    color: #dc3545; /* Màu đỏ cảnh báo */
+}
+.dashboard-sidebar nav li a.delete-account-link:hover {
+    color: #fff;
+    background-color: #dc3545;
+    border-left-color: #dc3545; /* Giữ border khi hover */
+}
+.dashboard-sidebar nav li a.delete-account-link.active {
+     border-left-color: #dc3545;
+     background-color: #f8d7da; /* Nền đỏ nhạt khi active */
+     color: #721c24;
+}
+
+/* Content Area */
+.dashboard-content h1 {
+    /* Style đã có hoặc điều chỉnh nếu cần */
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+/* Style chung cho các section cài đặt */
+.settings-section {
+    border: 1px solid #e9ecef; /* Border xám nhạt */
+    border-radius: 8px;
+    margin-bottom: 30px;
+    overflow: hidden; /* Đảm bảo border-radius hoạt động với header */
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa; /* Nền xám rất nhạt cho header section */
+    padding: 15px 20px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.settings-section h3 {
+    margin: 0;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #343a40;
+}
+
+/* Nút Edit */
+.btn-edit {
+    background-color: #fff;
+    color: #495057;
+    border: 1px solid #ced4da;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.btn-edit:hover {
+    background-color: #e9ecef;
+    border-color: #adb5bd;
+}
+.btn-edit i {
+    margin-right: 5px; /* Khoảng cách giữa icon và chữ */
+    color: #6c757d; /* Màu icon */
+}
+
+/* Nội dung chi tiết trong section */
+.details-content {
+    padding: 25px 20px;
+}
+
+/* Sử dụng Definition List (dl, dt, dd) để hiển thị thông tin */
+.details-content dl {
+    margin: 0;
+    display: grid;
+    grid-template-columns: max-content auto; /* Cột label tự rộng, cột value chiếm phần còn lại */
+    gap: 10px 20px; /* Khoảng cách dòng và cột */
+}
+.details-content dt { /* Label (First Name, Last Name...) */
+    font-weight: 600;
+    color: #495057;
+    grid-column: 1; /* Luôn ở cột 1 */
+}
+.details-content dd { /* Value */
+    margin: 0;
+    color: #343a40;
+    grid-column: 2; /* Luôn ở cột 2 */
+    min-height: 1.2em; /* Chiều cao tối thiểu để giữ layout nếu value rỗng */
+    background-color: #f1f3f5; /* Nền mờ cho value (tùy chọn) */
+    padding: 2px 6px; /* Padding nhỏ (tùy chọn) */
+    border-radius: 3px; /* Bo góc nhỏ (tùy chọn) */
+}
+
+
+/* Style riêng cho mục Other Information */
+.details-content.other-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+.nickname-dl {
+    flex-grow: 1; /* Phần nickname chiếm không gian */
+}
+
+.avatar-section {
+    text-align: center;
+}
+
+.avatar-placeholder {
+    width: 80px;
+    height: 80px;
+    background-color: #e9ecef;
+    border-radius: 50%; /* Hình tròn */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 10px auto; /* Căn giữa và tạo khoảng cách dưới */
+}
+.avatar-placeholder i {
+    font-size: 2.5em; /* Kích thước icon user */
+    color: #adb5bd; /* Màu icon */
+}
+
+
+/* --- Profile Dropdown Styles --- */
+.profile-dropdown-container {
+    position: relative; /* Để định vị dropdown */
+    display: inline-block;
+}
+
+.profile-dropdown {
+    display: none; /* Ẩn ban đầu */
+    position: absolute;
+    top: 100%; /* Ngay dưới icon */
+    right: 0;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    z-index: 100; /* Đè lên các phần tử khác */
+    margin-top: 8px; /* Khoảng cách với icon */
+    padding: 5px 0; /* Padding top/bottom */
+}
+
+.profile-dropdown a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9em;
+    white-space: nowrap; /* Không xuống dòng */
+    transition: background-color 0.2s ease;
+}
+
+.profile-dropdown a:hover {
+    background-color: #f8f9fa;
+}
+
+.profile-dropdown a i {
+    margin-right: 10px; /* Khoảng cách icon và text */
+    width: 16px; /* Đảm bảo icon thẳng hàng */
+    text-align: center;
+    color: #6c757d;
+}
+
+/* Class để hiện dropdown bằng JS */
+.profile-dropdown.show {
+    display: block;
+}
+
+/* --- Styles cho việc chuyển đổi nội dung settings (dùng JS) --- */
+.settings-content-area {
+    display: none; /* Mặc định ẩn các khu vực nội dung */
+}
+.settings-content-area.active {
+    display: block; /* Hiện khu vực có class active */
+}/* === Course View Specific Styles === */
+
+#course-view-content {
+    /* Ghi đè padding mặc định của .dashboard-content nếu cần */
+    padding: 0;
+    background-color: #fff; /* Đảm bảo nền trắng */
+}
+
+.course-view-header {
+    padding: 25px 30px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.course-view-header h1 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 1.9em;
+    font-weight: 600;
+    color: #333;
+}
+
+.progress-section {
+    display: flex;
+    gap: 30px; /* Khoảng cách giữa 2 progress bar */
+    flex-wrap: wrap; /* Xuống dòng nếu không đủ chỗ */
+}
+
+.progress-tracker {
+    flex: 1; /* Chia đều không gian */
+    min-width: 250px; /* Chiều rộng tối thiểu */
+}
+
+.progress-tracker label {
+    display: block;
+    font-size: 0.85em;
+    color: #555;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.progress-tracker progress {
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden; /* Đảm bảo bo góc cho progress bar */
+    border: none; /* Bỏ border mặc định */
+    margin-bottom: 5px;
+}
+
+/* --- Styling Progress Bar --- */
+/* Webkit (Chrome, Safari) */
+.progress-tracker progress::-webkit-progress-bar {
+    background-color: #e9ecef; /* Màu nền của thanh progress */
+    border-radius: 4px;
+}
+.progress-tracker progress::-webkit-progress-value {
+    background-color: #007bff; /* Màu mặc định (xanh dương) */
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+.progress-tracker progress.completion::-webkit-progress-value {
+    background-color: #28a745; /* Màu xanh lá cho completion */
+}
+
+/* Firefox */
+.progress-tracker progress::-moz-progress-bar {
+    background-color: #007bff; /* Màu mặc định (xanh dương) */
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+.progress-tracker progress.completion::-moz-progress-bar {
+    background-color: #28a745; /* Màu xanh lá cho completion */
+}
+/* --- End Styling Progress Bar --- */
+
+
+.progress-tracker .details-link {
+    font-size: 0.8em;
+    color: #6c757d;
+    text-decoration: none;
+}
+.progress-tracker .details-link:hover {
+    text-decoration: underline;
+}
+.progress-tracker .details-link i {
+    font-size: 0.8em;
+    margin-left: 3px;
+}
+
+
+/* --- Course View Main Layout --- */
+.course-view-main {
+    display: flex;
+    align-items: flex-start;
+    /* Không cần gap nếu dùng border cho sidebar */
+}
+
+/* Module List Sidebar (Cột trái) */
+.module-list-sidebar {
+    flex: 0 0 280px; /* Chiều rộng cố định, có thể điều chỉnh */
+    border-right: 1px solid #e0e0e0;
+    min-height: calc(100vh - 150px); /* Chiều cao tối thiểu để border kéo dài (cần điều chỉnh) */
+    padding: 20px 0;
+}
+.module-list-sidebar h4 {
+    font-size: 0.9em;
+    font-weight: 600;
+    color: #333;
+    padding: 0 20px 15px 20px;
+    margin: 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+.module-list-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+.module-list-sidebar li a {
+    display: flex; /* Dùng flex để căn icon và text */
+    align-items: center;
+    gap: 10px; /* Khoảng cách giữa icon và text */
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+    font-size: 0.9em;
+    border-left: 4px solid transparent;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.module-list-sidebar li a:hover {
+    background-color: #f8f9fa;
+    color: #000;
+}
+.module-list-sidebar li a.active {
+    background-color: #e8f5e1; /* Màu nền highlight */
+    border-left-color: #6aab3e;
+    color: #333;
+    font-weight: 600;
+}
+.module-list-sidebar li a .completion-icon {
+    color: #28a745; /* Màu xanh lá cho icon hoàn thành */
+    font-size: 1.1em;
+}
+
+/* Module Content Display (Cột phải) */
+.module-content-display {
+    flex-grow: 1;
+    padding: 25px 30px;
+}
+.module-content-display h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.lesson-item {
+    border: 1px solid #e9ecef;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    overflow: hidden; /* Để bo góc hoạt động */
+}
+.lesson-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #f8f9fa; /* Nền nhẹ cho header bài học */
+    cursor: pointer; /* Cho biết có thể click để mở/đóng */
+}
+.lesson-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    color: #343a40;
+}
+.lesson-icon {
+    font-size: 1.1em;
+    color: #6c757d; /* Màu icon loại bài học */
+    width: 20px; /* Đảm bảo độ rộng cố định */
+    text-align: center;
+}
+.completion-icon-inline {
+    color: #28a745; /* Màu xanh lá */
+    font-size: 1em;
+    margin-left: 5px; /* Khoảng cách nhỏ */
+}
+
+.toggle-lesson {
+    background: none;
+    border: none;
+    color: #6c757d;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+.toggle-lesson:hover {
+    color: #343a40;
+}
+/* Icon thay đổi khi mở/đóng (cần JS để thêm/bỏ class 'open') */
+.lesson-item.open .toggle-lesson i::before {
+    content: "\f077"; /* Font Awesome chevron-up */
+}
+.lesson-item:not(.open) .toggle-lesson i::before {
+     content: "\f078"; /* Font Awesome chevron-down */
+}
+
+
+.lesson-body {
+    padding: 20px;
+    border-top: 1px solid #e9ecef;
+    background-color: #fff;
+    /* display: none; /* JS sẽ xử lý việc ẩn/hiện bằng class hoặc style */
+}
+
+/* Nút Resume giống các nút action khác */
+.lesson-body .btn-resume {
+    /* Kế thừa từ .btn-action hoặc style riêng */
+     background-color: #6aab3e;
+     color: #fff;
+     padding: 6px 12px;
+     font-size: 0.85em;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+     /* Thêm style khác nếu cần */
+}
+.lesson-body .btn-resume:hover {
+    background-color: #5a9a2e;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .course-view-main {
+        flex-direction: column; /* Xếp chồng 2 cột */
+    }
+    .module-list-sidebar {
+        flex: 0 0 auto; /* Reset flex */
+        width: 100%;
+        border-right: none; /* Bỏ border phải */
+        border-bottom: 1px solid #e0e0e0; /* Thêm border dưới */
+        min-height: auto; /* Reset min-height */
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+    }
+     .module-list-sidebar ul {
+        max-height: 200px; /* Giới hạn chiều cao, thêm scroll nếu cần */
+        overflow-y: auto;
+     }
+     .module-list-sidebar li a {
+         border-left: none; /* Bỏ border trái */
+     }
+     .module-list-sidebar li a.active {
+        border-left-color: transparent;
+        border-bottom: 3px solid #6aab3e; /* Highlight bằng border dưới */
+        background-color: #f8f9fa; /* Nền sáng hơn khi active */
+     }
+
+}
+@media (max-width: 768px) {
+    .progress-section {
+        flex-direction: column; /* Xếp chồng progress bar */
+        gap: 20px;
+    }
+     .course-view-header h1 { font-size: 1.6em; }
+     .module-content-display { padding: 20px 15px; }
+     .module-content-display h2 { font-size: 1.3em; }
+     .lesson-header { padding: 12px; }
+     .lesson-info { font-size: 0.9em;}
+}/* === Lesson View Specific Styles === */
+
+body.lesson-view-page {
+    /* Ghi đè background nếu cần, hoặc để mặc định */
+    background-color: #fff;
+    display: flex;
+    flex-direction: column; /* Để footer dính xuống dưới */
+    min-height: 100vh;
+    overflow-x: hidden; /* Tránh scroll ngang do sidebar */
+}
+
+/* Lesson Header */
+.lesson-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 2%; /* Padding tương đối */
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky; /* Giữ header khi cuộn */
+    top: 0;
+    z-index: 90; /* Dưới dropdown profile */
+}
+/* Logo trong lesson header có thể nhỏ hơn */
+.lesson-header .logo img { 
+    height: auto; /* Đặt chiều cao mong muốn cho logo */
+    width: 120px; /* Chiều rộng tự động điều chỉnh để giữ tỷ lệ */
+    display: block; 
+}
+
+.lesson-nav {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Khoảng cách các nút nav */
+    flex-grow: 1; /* Chiếm không gian giữa */
+    justify-content: center; /* Căn giữa */
+    padding: 0 20px; /* Padding tránh chạm logo/actions */
+}
+.lesson-nav .nav-toggle-btn,
+.lesson-nav .nav-arrow-btn {
+    background: none;
+    border: none;
+    font-size: 1.1em;
+    color: #555;
+    cursor: pointer;
+    padding: 5px;
+}
+.lesson-nav .nav-toggle-btn:hover,
+.lesson-nav .nav-arrow-btn:hover {
+    color: #000;
+}
+
+.lesson-title-header {
+    font-weight: 600;
+    color: #333;
+    font-size: 1em;
+    white-space: nowrap; /* Không xuống dòng */
+    overflow: hidden; /* Giấu phần thừa */
+    text-overflow: ellipsis; /* Thêm dấu ... nếu quá dài */
+    max-width: 400px; /* Giới hạn chiều rộng title */
+}
+
+.lesson-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.lesson-actions > a { /* Icon messages */
+    font-size: 1.2em;
+    color: #555;
+}
+.lesson-actions > a:hover { color: #000; }
+/* Profile dropdown container đã có style từ trước */
+
+
+/* Lesson Wrapper (3 cột) */
+.lesson-wrapper {
+    display: flex;
+    flex-grow: 1; /* Chiếm hết chiều cao còn lại */
+    background-color: #f4f7f9; /* Nền xám nhạt cho phần nội dung chính */
+}
+
+/* Left Sidebar */
+.lesson-sidebar-left {
+    flex: 0 0 55px; /* Chiều rộng cố định cho sidebar icon */
+    background-color: #343a40; /* Nền tối */
+    padding: 15px 0;
+    transition: margin-left 0.3s ease; /* Hiệu ứng ẩn/hiện */
+}
+.lesson-sidebar-left nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+.lesson-sidebar-left nav li a {
+    display: block;
+    color: #adb5bd; /* Màu icon xám nhạt */
+    font-size: 1.4em; /* Cỡ icon */
+    padding: 15px 0;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+.lesson-sidebar-left nav li a:hover {
+    color: #fff;
+    background-color: #495057;
+}
+.lesson-sidebar-left nav li a.active {
+    color: #fff;
+    background-color: #007bff; /* Màu xanh highlight */
+}
+/* JS sẽ thêm/bỏ class 'collapsed' để ẩn sidebar */
+.lesson-sidebar-left.collapsed {
+    margin-left: -55px; /* Ẩn đi bằng margin âm */
+}
+
+/* Main Lesson Content */
+.lesson-content {
+    flex-grow: 1; /* Chiếm không gian chính */
+    padding: 30px 40px;
+    overflow-y: auto; /* Scroll nếu nội dung dài */
+}
+.content-panel {
+    max-width: 900px; /* Giới hạn chiều rộng nội dung để dễ đọc */
+    margin: 0 auto; /* Căn giữa */
+    background-color: #fff; /* Nền trắng cho vùng nội dung */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+.content-panel h1 {
+    font-size: 2em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #212529;
+    font-weight: 700;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+.content-panel h2 {
+    font-size: 1.5em;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    color: #343a40;
+    font-weight: 600;
+}
+.content-panel p {
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 1.2em;
+}
+.content-panel strong {
+    font-weight: 600;
+    color: #000;
+}
+.content-image {
+    margin: 30px 0;
+    text-align: center;
+}
+.content-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+/* Footer Progress Bar */
+.lesson-progress-footer {
+    background-color: #fff;
+    border-top: 1px solid #e0e0e0;
+    padding: 15px 0;
+    position: sticky; /* Dính ở dưới */
+    bottom: 0;
+    z-index: 80;
+}
+.progress-steps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 900px; /* Giới hạn chiều rộng */
+    margin: 0 auto;
+}
+.step {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px; /* Kích thước hình tròn */
+    height: 24px;
+    border-radius: 50%;
+    background-color: #e9ecef; /* Màu nền chưa hoàn thành */
+    color: #adb5bd; /* Màu icon chưa hoàn thành */
+    font-size: 0.8em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.step.completed {
+    background-color: #28a745; /* Màu nền hoàn thành */
+    color: #fff; /* Màu icon hoàn thành */
+}
+.step-line {
+    flex-grow: 1;
+    height: 2px;
+    background-color: #e9ecef; /* Màu đường nối chưa hoàn thành */
+    margin: 0 5px; /* Khoảng cách với hình tròn */
+    max-width: 60px; /* Giới hạn chiều dài đường nối */
+    transition: background-color 0.3s ease;
+}
+.step-line.completed {
+    background-color: #28a745; /* Màu đường nối hoàn thành */
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .lesson-sidebar-right { flex-basis: 250px; } /* Giảm chiều rộng editor */
+    .lesson-sidebar-right.collapsed { margin-right: -250px; }
+}
+@media (max-width: 992px) {
+    .lesson-sidebar-left { /* Ẩn mặc định */
+        position: absolute;
+        left: 0; top: 0; bottom: 0; /* Chiếm chiều cao */
+        height: calc(100vh - 51px); /* Chiều cao trừ header */
+        margin-left: -55px; /* Ẩn đi */
+        z-index: 100; /* Nằm trên */
+        top: 51px; /* Nằm dưới header */
+    }
+    .lesson-sidebar-left.open { /* JS thêm class open để hiện */
+         margin-left: 0;
+    }
+    .lesson-sidebar-right { /* Ẩn mặc định */
+         position: absolute;
+         right: 0; top: 0; bottom: 0;
+         height: calc(100vh - 51px);
+         margin-right: -250px; /* Ẩn đi */
+         z-index: 100;
+         top: 51px;
+     }
+     .lesson-sidebar-right.open { /* JS thêm class open để hiện */
+         margin-right: 0;
+     }
+     .editor-toggle { left: -30px; } /* Giữ vị trí nút toggle */
+
+    .lesson-content { padding: 20px; }
+    .content-panel { padding: 25px; }
+    .lesson-progress-footer { padding: 10px 0;}
+}
+@media (max-width: 768px) {
+    .lesson-nav .lesson-title-header { max-width: 150px; } /* Thu nhỏ title */
+    .lesson-actions .beta-tag { display: none; } /* Ẩn tag beta */
+    .content-panel h1 { font-size: 1.6em; }
+    .content-panel h2 { font-size: 1.3em; }
+    .progress-steps { padding: 0 15px; } /* Padding cho thanh progress */
+}
+.course-navigation {
+    width: 280px;
+    background: #f5f5f5;
+    border-right: 1px solid #e0e0e0;
+    overflow-y: auto;
+    height: calc(100vh - 60px);
+    transition: transform 0.3s ease;
+}
+
+.nav-toggle {
+    position: fixed;
+    top: 70px;
+    left: 10px;
+    z-index: 100;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-hidden .course-navigation {
+    transform: translateX(-280px);
+}
+
+.lesson-container {
+    display: flex;
+    flex: 1;
+    transition: padding-left 0.3s ease;
+}
+
+.nav-hidden .lesson-container {
+    padding-left: 0;
+}
+
+.course-navigation h2 {
+    margin: 0;
+    padding: 15px;
+    font-size: 16px;
+    border-bottom: 1px solid #e0e0e0;
+    background: #fff;
+}
+
+.module-section {
+    margin-bottom: 10px;
+}
+
+.module-header {
+    padding: 10px 15px;
+    background: #e9e9e9;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.module-header i {
+    transition: transform 0.3s;
+}
+
+.module-header.collapsed i {
+    transform: rotate(-90deg);
+}
+
+.module-content {
+    max-height: 1000px;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.module-content.collapsed {
+    max-height: 0;
+}
+
+.topic-header {
+    padding: 8px 15px 8px 25px;
+    background: #f0f0f0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topic-header i {
+    transition: transform 0.3s;
+}
+
+.topic-header.collapsed i {
+    transform: rotate(-90deg);
+}
+
+.topic-content {
+    max-height: 500px;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.topic-content.collapsed {
+    max-height: 0;
+}
+
+.page-link {
+    display: block;
+    padding: 8px 15px 8px 35px;
+    text-decoration: none;
+    color: #333;
+    transition: background 0.2s;
+}
+
+.page-link:hover {
+    background: #e5e5e5;
+}
+
+.page-link.active {
+    background: #dbeeff;
+    font-weight: bold;
+}
+
+.content-container {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    height: calc(100vh - 60px);
+}
+
+.page-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.nav-button {
+    padding: 8px 15px;
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-button:hover {
+    background: #e0e0e0;
+}
+
+.nav-button.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    .course-navigation {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        z-index: 90;
+        width: 260px;
+        transform: translateX(-260px);
+    }
+    
+    .nav-active .course-navigation {
+        transform: translateX(0);
+    }
+    
+    .content-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: 89;
+    }
+    
+    .nav-active .content-overlay {
+        display: block;
+    }
+}
+/* Custom styles to hide sidebar and adjust layout */
+.course-navigation {
+    display: none !important; /* Hide the sidebar completely */
+}
+        
+.lesson-container {
+        grid-template-columns: 1fr !important; /* Make content take full width */
+}
+        
+.content-container {
+    width: 100%; /* Ensure content takes full width */
+    max-width: 1200px; /* Optional: limit maximum width */
+    margin: 0 auto; /* Center the content */
+    padding: 20px; /* Add some padding */
+}
+        
+/* Hide the navigation toggle button */
+.nav-toggle {
+    display: none !important;
+}    
+/* Hide the overlay since we don't need it anymore */
+.content-overlay {
+    display: none !important;
+}
+        
+/* Remove nav-hidden class effects since we don't need them */
+    body.nav-hidden .content-container {
+    margin-left: 0;
+}
+ /* Style cơ bản cho icon checkmark (có thể bổ sung class .completed để đổi màu) */
+ .completion-icon-inline {
+    color: #ccc; /* Màu xám nhạt mặc định */
+    margin-left: 8px;
+}
+.completion-icon-inline.completed {
+     color: #28a745; /* Màu xanh lá khi hoàn thành */
+}
+/* CSS cho sidebar active item */
+.module-list-sidebar ul li a.active {
+    font-weight: bold;
+    color: #0056b3; /* Màu active */
+    background-color: #e9ecef; /* Nền nhẹ cho item active */
+}
+/* CSS cho nút bấm trong lesson body */
+.lesson-body .btn-action {
+    padding: 8px 15px; border: none; border-radius: 4px; cursor: pointer;
+    font-size: 0.9em; margin-right: 10px; color: white;
+     text-decoration: none; display: inline-block;
+}
+ .btn-resume { background-color: #17a2b8; }
+.btn-start-test { background-color: #28a745; }
+.btn-resume:hover { background-color: #138496; }
+.btn-start-test:hover { background-color: #218838; }
+
+/* Style cho lesson item */
+.lesson-item { border: 1px solid #ddd; margin-bottom: 10px; border-radius: 5px; overflow: hidden; }
+.lesson-header { background-color: #f8f9fa; padding: 10px 15px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
+.lesson-info { display: flex; align-items: center; }
+.lesson-icon { margin-right: 10px; color: #6c757d; }
+.toggle-lesson { background: none; border: none; font-size: 1em; cursor: pointer; }
+.lesson-body { padding: 15px; border-top: 1px solid #ddd; background-color: #fff; }
+.lesson-item.open .lesson-body { display: block; } /* Mặc định ẩn body */
+.lesson-item:not(.open) .lesson-body { display: none; }
+.progress-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+.progress-fill {
+    height: 10px;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}
+.btn-enroll {
+    background-color: #4CAF50;
+    color: white;
+}
+.btn-complete {
+    background-color: #2196F3;
+    color: white;
+}
+.course-status {
+    font-size: 0.85em;
+    color: #666;
+    margin: 5px 0;
+}

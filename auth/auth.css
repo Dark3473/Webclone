@@ -1,0 +1,336 @@
+/* General Auth Page Styles */
+body.auth-page {
+    margin: 0;
+    font-family: 'Inter', sans-serif; /* Sử dụng font Inter hoặc font bạn chọn */
+    min-height: 100vh;
+    /* Gradient background - Điều chỉnh màu sắc cho giống ảnh */
+    background: linear-gradient(135deg, #e0f7fa 0%, #f1f8e9 40%, #ffffff 100%);
+    /* Hoặc một gradient khác: */
+    /* background: linear-gradient(to bottom right, #d1e9fc, #e3f2fd, #ffffff); */
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Để chứa pseudo-element background graphic */
+    overflow-x: hidden; /* Tránh scroll ngang do graphic */
+}
+
+/* Background Graphic (Stylized X) using Pseudo-element */
+body.auth-page::after {
+    content: '';
+    position: absolute;
+    /* Thay bằng URL tới file ảnh SVG hoặc PNG của graphic chữ X */
+    background-image: url('images/background-graphic.svg'); /* !! QUAN TRỌNG: Thay bằng đường dẫn đúng !! */
+    background-repeat: no-repeat;
+    background-position: center right; /* Căn chỉnh vị trí */
+    background-size: contain; /* Hoặc cover, hoặc đặt kích thước cụ thể */
+    width: 60%; /* Điều chỉnh kích thước */
+    height: 80%; /* Điều chỉnh kích thước */
+    top: 50%;
+    right: -5%; /* Điều chỉnh vị trí ngang */
+    transform: translateY(-50%);
+    opacity: 0.15; /* Điều chỉnh độ mờ */
+    z-index: 0; /* Nằm dưới nội dung */
+    pointer-events: none; /* Không bắt sự kiện chuột */
+}
+
+
+/* Auth Header */
+.auth-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%; /* Padding tương đối */
+    width: 90%; /* Giới hạn chiều rộng */
+    max-width: 1400px; /* Chiều rộng tối đa */
+    margin: 0 auto; /* Căn giữa */
+    position: relative; /* Đảm bảo header nằm trên graphic */
+    z-index: 2;
+}
+
+.auth-header .logo a {
+    text-decoration: none;
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #6aab3e; /* Màu logo giống trang chính */
+}
+.auth-header .logo img { 
+    height: auto; /* Đặt chiều cao mong muốn cho logo */
+    width: 110px; /* Chiều rộng tự động điều chỉnh để giữ tỷ lệ */
+    display: block;
+}
+/* Hoặc style cho ảnh logo nếu dùng */
+/* .auth-header .logo img { height: 35px; } */
+
+.auth-header .auth-link a {
+    color: #333; /* Màu đen/xám đậm cho link Log in/Sign up */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95em;
+}
+.auth-header .auth-link a:hover {
+    text-decoration: underline;
+}
+
+
+/* Auth Main Content */
+.auth-main {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Đẩy slogan và form ra 2 bên */
+    padding: 20px 5%; /* Padding tương đối */
+    width: 90%;
+    max-width: 1400px; /* Chiều rộng tối đa */
+    margin: 0 auto; /* Căn giữa */
+    position: relative;
+    z-index: 1;
+    gap: 40px; /* Khoảng cách giữa slogan và form */
+}
+
+
+/* Slogan */
+.auth-slogan {
+    flex-basis: 45%; /* Chiếm khoảng 45% chiều rộng */
+    color: #1a2b48; /* Màu chữ đậm cho slogan */
+    padding-right: 20px; /* Khoảng cách với form */
+}
+
+.auth-slogan h1 {
+    font-size: 2.8em; /* Cỡ chữ lớn */
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0;
+}
+
+
+/* Form Container */
+.auth-form-container {
+    flex-basis: 45%; /* Chiếm khoảng 45% chiều rộng */
+    max-width: 450px; /* Giới hạn chiều rộng tối đa của form */
+    background-color: #fff;
+    padding: 40px 35px; /* Padding */
+    border-radius: 16px; /* Bo góc */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); /* Đổ bóng nhẹ */
+    position: relative; /* Đảm bảo form nằm trên graphic */
+    z-index: 1;
+    margin-left: auto; /* Đẩy form sang phải nếu cần */
+}
+
+.auth-form-container h2 {
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #212529;
+    margin: 0 0 5px 0; /* Giảm margin bottom */
+}
+
+.title-underline {
+    height: 4px;
+    width: 40px; /* Chiều rộng gạch chân */
+    /* Gradient gạch chân - điều chỉnh màu */
+    background: linear-gradient(to right, #6aab3e, #80cbc4);
+    border-radius: 2px;
+    margin-bottom: 35px; /* Khoảng cách với trường đầu tiên */
+}
+
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 25px; /* Khoảng cách giữa các trường */
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.85em;
+    color: #555;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 10px 0; /* Chỉ padding top/bottom */
+    border: none; /* Bỏ border mặc định */
+    border-bottom: 1px solid #ccc; /* Chỉ giữ border dưới */
+    font-size: 1em;
+    background-color: transparent; /* Nền trong suốt */
+    outline: none; /* Bỏ outline khi focus */
+    transition: border-color 0.3s ease;
+    color: #333;
+}
+.form-group input[type="text"]:focus
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus {
+    border-bottom-color: #6aab3e; /* Đổi màu border khi focus */
+}
+
+/* Form Options (Forgot Password) */
+.form-options {
+    text-align: right;
+    margin-bottom: 20px;
+}
+.forgot-password {
+    font-size: 0.85em;
+    color: #6aab3e;
+    text-decoration: none;
+}
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+
+/* Submit Button */
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    background-color: #6aab3e; /* Màu nút */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(106, 171, 62, 0.3); /* Đổ bóng nhẹ cho nút */
+}
+
+.btn-submit:hover {
+    background-color: #5a9a2e; /* Màu đậm hơn khi hover */
+    box-shadow: 0 6px 15px rgba(106, 171, 62, 0.4);
+}
+
+
+/* Switch Form Link */
+.switch-form-link {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.switch-form-link a {
+    color: #6aab3e; /* Màu link */
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.switch-form-link a:hover {
+    text-decoration: underline;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .auth-main {
+        flex-direction: column; /* Xếp chồng slogan và form */
+        text-align: center; /* Căn giữa text */
+        padding: 40px 5%;
+        justify-content: center; /* Căn giữa theo chiều dọc */
+        gap: 30px;
+    }
+    .auth-slogan {
+        flex-basis: auto; /* Bỏ flex-basis */
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+    .auth-slogan h1 {
+        font-size: 2.2em; /* Giảm cỡ chữ slogan */
+    }
+    .auth-form-container {
+        flex-basis: auto;
+        width: 100%; /* Chiếm toàn bộ chiều rộng */
+        max-width: 450px; /* Giữ giới hạn */
+        margin-left: 0; /* Bỏ margin trái */
+        padding: 30px 25px;
+    }
+    body.auth-page::after {
+        width: 80%;
+        height: 60%;
+        opacity: 0.1; /* Giảm độ mờ hơn nữa */
+        right: -15%; /* Điều chỉnh lại vị trí */
+    }
+}
+
+@media (max-width: 576px) {
+     .auth-header {
+        padding: 15px 5%;
+    }
+     .auth-header .logo a { font-size: 1.4em; }
+     .auth-header .auth-link a { font-size: 0.9em; }
+
+     .auth-slogan h1 {
+        font-size: 1.8em;
+    }
+     .auth-form-container h2 { font-size: 1.6em; }
+     .form-group { margin-bottom: 20px; }
+     .btn-submit { padding: 12px; }
+     .switch-form-link { font-size: 0.85em; }
+
+     body.auth-page::after {
+         /* Ẩn hoặc điều chỉnh graphic nhỏ hơn nữa */
+         width: 90%;
+         height: 50%;
+         opacity: 0.08;
+         right: -25%;
+     }
+}
+/* === Forgot Password Specific Styles === */
+
+/* Style cho nút Reset Password với gradient */
+.btn-submit.btn-reset {
+    /* Gradient từ xanh dương sang xanh lá cây - điều chỉnh mã màu cho chính xác */
+    background: linear-gradient(to right, #007bff, #50c878); /* Ví dụ: Blue -> Emerald Green */
+    /* Hoặc dùng màu từ ảnh nếu lấy được mã màu chính xác hơn */
+    /* background: linear-gradient(to right, #1e63c2, #6aab3e); */
+
+    /* Ghi đè box-shadow nếu cần để phù hợp với màu mới */
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3); /* Bóng mờ theo màu xanh dương */
+}
+
+.btn-submit.btn-reset:hover {
+    /* Có thể làm tối gradient hoặc tăng độ đậm bóng mờ khi hover */
+    background: linear-gradient(to right, #0056b3, #40a060);
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4);
+}
+/* Style cho link "Back to Log in" */
+.back-link {
+    text-align: center;
+    margin-top: 25px; /* Khoảng cách với nút */
+}
+
+.back-link a {
+    color: #555; /* Màu xám */
+    font-size: 0.9em;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.back-link a:hover {
+    color: #000; /* Đậm hơn khi hover */
+    text-decoration: underline;
+}
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    text-align: center;
+}
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+    text-align: center;
+}
+.message { padding: 10px; margin-bottom: 15px; border-radius: 4px; text-align: center; }
+.success-message { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+.error-message { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+.reset-password-form { margin-top: 20px; }
